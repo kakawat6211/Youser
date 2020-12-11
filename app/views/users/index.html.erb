@@ -1,0 +1,16 @@
+
+<%= stylesheet_link_tag "index", :media => "all" %>
+
+<div class="index_title">
+  <h1>Youser</h1>
+</div>
+
+<div class="user">
+  <% @users.each do |user| %>
+    <%= link_to user.name, home_user_path(id: user.id) %><br>
+  <% end %>
+</div>
+
+<div class="new">
+  <%= link_to "New Youser", new_user_path %>
+</div>

@@ -1,0 +1,12 @@
+<%= stylesheet_link_tag "_menu", :media => "all" %>
+
+<header>
+    <h1 class="title"><%= @user.name %></h1>
+    <nav class="nav">
+      <ul class="menu-group">
+        <li class="menu-item"><%= link_to "HOME", home_user_path %></li>
+        <li class="menu-item"><%= link_to "PROFILE", user_path %></li>
+        <li class="menu-item"><%= link_to "一覧", users_path %></li>
+      </ul>
+    </nav>
+</header>

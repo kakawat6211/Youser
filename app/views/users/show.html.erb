@@ -1,0 +1,11 @@
+<%= render 'menu'%>
+
+<%= @user.name %><br>
+<%= @user.birth_date %><br>
+<%= (Time.now.strftime('%Y%m%d').to_i - @user.birth_date.strftime('%Y%m%d').to_i) / 10000 %><br>
+<%= @user.height %><br>
+<%= @user.chara %><br>
+
+<%= link_to "一覧", users_path %>
+<%= link_to "編集", edit_user_path %>
+<%= link_to "削除", "/users/#{@user.id}", method: :delete %>
